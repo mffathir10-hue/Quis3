@@ -51,6 +51,5 @@ func InitiateRouter(db *sql.DB) {
 
 	routers.Initiator(router, db)
 
-	router.Run(":8080")
-
+	router.Run(":" + os.Getenv("PORT"))
 }
